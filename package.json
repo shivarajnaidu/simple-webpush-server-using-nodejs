@@ -1,0 +1,24 @@
+{
+  "name": "simple-webpush-server-using-nodejs",
+  "version": "1.0.0",
+  "description": "Web Push Notification Server Using NodeJs (expressjs, mongodb)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/shivarajnaidu/simple-webpush-server-using-nodejs.git"
+  },
+  "author": "Yuvaraj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/shivarajnaidu/simple-webpush-server-using-nodejs/issues"
+  },
+  "homepage": "https://github.com/shivarajnaidu/simple-webpush-server-using-nodejs#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "web-push": "^3.3.3"
+  }
+}

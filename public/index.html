@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web Push Notification Experiment</title>
+    <link rel="stylesheet" href="/lib/bootstrap/bootstrap.min.css">
+    <script src="/js/client.js"></script>
+</head>
+
+<body class="container-fluid">
+    <div class="row">
+        <div class="col mt-5">
+            <div class="text-center">
+                <button id="subscribe-btn" class="btn btn-primary">Subscribe</button>
+            </div>
+        </div>
+        <div class="col mt-5">
+            <div class="text-center">
+                <button id="trigger-btn" class="btn btn-primary">Trigger</button>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script>
+        'use strict';
+        (function () {
+            const subscribeBtn = document.querySelector('#subscribe-btn');
+            subscribeBtn.addEventListener('click', event => {
+                // Call Push Notification Subscription Endpoint
+                if (subscribePush) {
+                    subscribePush();
+                }
+            });
+
+            // Trigger for notifiation
+
+            const triggerBtn = document.querySelector('#trigger-btn');
+            triggerBtn.addEventListener('click', async (event) => {
+                // Call Push Notification Subscription Endpoint
+                try {
+                    await fetch('/api/notify');
+                } catch (error) {
+                    console.error(error.message, error);
+                }
+            });
+        })();
+    </script>
+</body>
+
+</html>
